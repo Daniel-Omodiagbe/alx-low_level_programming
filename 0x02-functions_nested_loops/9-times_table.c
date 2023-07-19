@@ -38,10 +38,6 @@ void times_table(void)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				else
-				{
-					_putchar(num2 * num1);
-				}
 			}
 		}
 		_putchar(10);
