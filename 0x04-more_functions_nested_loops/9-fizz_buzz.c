@@ -5,7 +5,7 @@
 * Return: Nothing
 */
 
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -29,5 +29,6 @@ void main(void)
 		}
 	}
 	putchar(10);
+	return (0);
 }
 
