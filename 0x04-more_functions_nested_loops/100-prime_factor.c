@@ -26,6 +26,6 @@ int main(void)
 			}
 		}
 	}
-	printf("%ld\n", largest)
+	printf("%ld\n", largest);
 	return (0);
 }
