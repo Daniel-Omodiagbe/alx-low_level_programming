@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-* main - entry point
+* main - entry point of the program
 * Return: 0
 */
 
@@ -21,14 +21,7 @@ int main(void)
 					if (i > largest)
 					{
 						largest = i;
-						/*printf("%ld\n", largest);*/
 					}
-					/*
-					*else
-					*{
-					*	printf("%ld\n", largest);
-					}
-					*/
 				}
 			}
 		}
