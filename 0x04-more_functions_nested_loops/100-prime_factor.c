@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 /**
 * main - entry point of the program
@@ -7,22 +8,22 @@
 
 int main(void)
 {
-	long int i, j, largest;
+	long int num = 612852475143;
+	long int i, largest;
 
-	for (i = 12057; i < 50829599; i++)
+	for (i = 2; i <= num; i++)
 	{
-		for (j = 12056; j < i - 1; j++)
+		if ((num % i == 0) && ((num / i) * i) == num)
 		{
-			if (!(i % j == 0) && ((i / j) * j) != i)
+			if (num % i == 0)
 			{
-				if (50829599 % i == 0)
+				largest = i;
+				if (i > largest)
 				{
-					largest = 12057;
-					if (i > largest)
-					{
-						largest = i;
-					}
+					largest = i;
+
 				}
+				num = num / i;
 			}
 		}
 	}
