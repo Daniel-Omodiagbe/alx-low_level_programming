@@ -29,7 +29,7 @@ void puts2(char *str)
 	}
 	else
 	{
-		for (i = 0; i < count / 2; i++)
+		for (i = 0; i < (count + 1) / 2; i++)
 		{
 			_putchar(*str2);
 			str2 = str2 + 2;
