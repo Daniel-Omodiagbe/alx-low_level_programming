@@ -16,5 +16,5 @@ int main(int argc, char *argv[])
 		count++;
 	}
 	printf("%s\n", argv[0]);
-	return (count);
+	return (0);
 }
