@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <math.h>
 
 /**
 * print_dog - prints a struct dog
@@ -18,7 +19,7 @@ void print_dog(struct dog *d)
 		{
 			printf("Name: %s\n", (*d).name);
 		}
-		if (!((*d).age))
+		if (isnan((*d).age))
 		{
 			printf("Age: (nil)\n");
 		}
