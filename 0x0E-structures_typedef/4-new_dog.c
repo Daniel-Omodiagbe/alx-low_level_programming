@@ -44,9 +44,11 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
-* _strlen - returns the length of a string
-* @s: pointer to string of characters
-* Return: length of string
+* *new_dog - creates a ew dog
+* @name: dog name
+* @age: dog age
+* @owner: dog owner
+* Return: Nothing
 */
 
 dog_t *new_dog(char *name, float age, char *owner)
@@ -56,7 +58,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	doggy = malloc(sizeof(dog_t));
 	if (doggy)
 	{
-		doggy->name = malloc(_strlen(name));
+		doggy->name = malloc(_strlen(name) + 1);
 		if (doggy->name)
 		{
 			_strcpy(doggy->name, name);
@@ -67,7 +69,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 		doggy->age = age;
-		doggy->owner = malloc(_strlen(owner));
+		doggy->owner = malloc(_strlen(owner) + 1);
 		if (doggy->owner)
 		{
 			_strcpy(doggy->owner, owner);
