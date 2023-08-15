@@ -1,4 +1,23 @@
 #include "dog.h"
+/**
+* _strlen - returns the length of a string
+* @s: pointer to string of characters
+* Return: length of string
+*/
+
+int _strlen(char *s)
+{
+	int count;
+
+	count = 0;
+	while (*s != '\0')
+	{
+		count++;
+		s++;
+	}
+	return (count);
+}
+
 
 /**
 * *_strcpy - copies a string
@@ -30,42 +49,34 @@ char *_strcpy(char *dest, char *src)
 * Return: length of string
 */
 
-int _strlen(char *s)
-{
-	int count;
-
-	count = 0;
-	while (*s != '\0')
-	{
-		count++;
-		s++;
-	}
-	return (count);
-}
-
-/**
-* *new_dog - creates a new dog
-* @name: name of dog
-* @age: age of dog
-* @owner: owner of dog
-* Return: pointer to struct dog
-*/
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *doggy;
-	char *new_name, *new_owner;
 
 	doggy = malloc(sizeof(dog_t));
 	if (doggy)
 	{
-		doggy->name = name;
-		new_name = malloc(sizeof(_strlen(name)));
-		_strcpy(new_name, name);
+		doggy->name = malloc(_strlen(name));
+		if (doggy->name)
+		{
+			_strcpy(doggy->name, name);
+		}
+		else
+		{
+			free(doggy);
+			return (NULL);
+		}
 		doggy->age = age;
-		doggy->owner = owner;
-		new_owner = malloc(sizeof(_strlen(owner)));
-		_strcpy(new_owner, owner);
+		doggy->owner = malloc(_strlen(owner));
+		if (doggy->owner)
+		{
+			_strcpy(doggy->owner, owner);
+		}
+		else
+		{
+			free(doggy);
+			return (doggy);
+		}
 		return (doggy);
 	}
 	return (NULL);
