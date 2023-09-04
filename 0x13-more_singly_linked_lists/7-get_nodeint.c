@@ -20,17 +20,15 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 			count++;
 			head = head->next;
 		}
-		if (index >= count)
-		{
-			return (NULL);
-		}
-		for (i = 0; i < count && tmp->next != NULL; i++, tmp = tmp->next)
+		printf("%u\n", count);
+		for (i = 0; i <= count && tmp->next != NULL; i++, tmp = tmp->next)
 		{
 			if (i == index)
 			{
 				return (tmp);
 			}
 		}
+		return (NULL);
 	}
 	return (NULL);
 }
