@@ -11,7 +11,6 @@ void print_binary(unsigned long int n)
 	unsigned long int num;
 	int i;
 
-	size = sizeof(unsigned long int) * 8;
 	for (i = 32 - 1; i >= 0; i--)
 	{
 		num = n >> i;
