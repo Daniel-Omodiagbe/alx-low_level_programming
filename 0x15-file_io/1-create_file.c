@@ -24,8 +24,8 @@ int create_file(const char *filename, char *text_content)
 		count = count + 1;
 	}
 	umask(0);
-	fd = open(filename, O_CREAT | O_RDWR | O_TRUNC, 0600);
-	if (fd)
+	fd = open(filename, O_CREAT |  O_TRUNC, 0600);
+	if (fd != -1)
 	{
 		file_write = write(fd, text_content, count);
 		if (file_write)
