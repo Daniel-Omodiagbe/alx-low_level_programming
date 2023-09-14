@@ -18,6 +18,10 @@ int get_bit(unsigned long int n, unsigned int index)
 		count++;
 		num = num >> 1;
 	}
+	if (index > count - 1)
+	{
+		return (-1);
+	}
 	for (i = 0; i < count; i++)
 	{
 		if (i == index)
